@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <select id="genres">
+            <option value="rock">Rock</option>
+            <option value="blues" selected>Blues</option>
+        </select>
+        <div id="selected"></div>
+        
+
+
+        <!-- 
+            @author: LASME Ayou Emeline
+         -->
+
+
+        <script>
+
+            // afficher la valeur de l'option sélectionnée dans le select
+            const select = document.getElementById('genres');
+            const selectionnerOption = select.value;
+            console.log(selectionnerOption);
+
+            // ajouter une nouvelle option et la sélectionner par défaut :
+        
+            // Creer la nouvelle option element
+            const nouvelleOption = document.createElement('option');
+            nouvelleOption.value = 'classic';
+            nouvelleOption.textContent = 'classic';
+
+            // Ajouter une nouvelle option au select tag
+            select.appendChild(nouvelleOption);
+
+            // Selectionner la nouvelle option
+            select.value = 'classic';
+        </script>
+        
+    </body>
+</html>

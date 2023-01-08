@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form>
+            <select id="colorSelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>White</option>
+                <option>Black</option>
+            </select>
+            <input type="button" value="Select and Remove" id="removeButton">
+        </form>
+
+
+
+
+        <!-- 
+            @author: LASME Ayou Emeline
+         -->
+
+
+
+
+        <script>
+            // obtenir le boutton et selectionner l'element
+            const removeButton = document.querySelector('#removeButton');
+            const colorSelect = document.querySelector('#colorSelect');
+
+            // Ajouter un evenement click dans le boutton
+            removeButton.addEventListener('click', removeColor);
+
+            function removeColor() {
+                // obtenir l'option selectionnee
+                const selectedOption = colorSelect.options[colorSelect.selectedIndex];
+
+                // supprimer l'element selectionner dans le select
+                colorSelect.remove(colorSelect.selectedIndex);
+            }
+        </script>
+
+    </body>
+</html>
